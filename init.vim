@@ -24,7 +24,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundle 'ctrlpvim/ctrlp.vim'
   NeoBundle 'bling/vim-airline'
   NeoBundle 'vim-airline/vim-airline-themes'
-  NeoBundle 'altercation/vim-colors-solarized'
   NeoBundle 'flazz/vim-colorschemes'
   NeoBundle 'itchyny/vim-stylus'
   NeoBundle 'mattn/emmet-vim'
@@ -39,7 +38,11 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundle 'tpope/vim-surround'
   NeoBundle 'pangloss/vim-javascript'
   NeoBundle 'tpope/vim-commentary'
-  NeoBundle 'justinj/vim-pico8-syntax'
+  NeoBundle 'yaymukund/vim-haxe'
+  NeoBundle 'mxw/vim-jsx'
+  NeoBundle 'SirVer/ultisnips'
+  NeoBundle 'epilande/vim-es2015-snippets'
+  NeoBundle 'epilande/vim-react-snippets'
 call neobundle#end()
 filetype plugin indent on
 
@@ -50,18 +53,29 @@ NeoBundleCheck
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_extensions = ['buffertag', 'tag', 'line', 'dir']
+set wildignore+=*/tmp/*,*.yy,*.yyp
+let g:ctrlp_custom_ignore = '\v[\/]\.(yy|yyp)$'
 map <C-n> :NERDTreeToggle<CR>
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
+set termguicolors
+set t_Co=256
 syntax enable
-colorscheme hydrangea
+colorscheme monokai_pro
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
-let g:airline_theme='tomorrow'
+let g:airline_theme='minimalist'
 let g:airline#extensions#ale#enabled = 1
 let g:user_emmet_leader_key='<C-Z>'
 let g:ale_sign_column_always = 1
+let g:UltiSnipsExpandTrigger='<C-l>'
+let g:user_emmet_settings = {
+\  'javascript.jsx' : {
+\      'extends' : 'jsx',
+\  },
+\}
 filetype plugin on
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+let NERDTreeIgnore = ['\.yy$','\.yyp$']
 
 set backspace=2         " backspace in insert mode works like normal editor
 syntax on               " syntax highlighting
@@ -79,4 +93,4 @@ set tabstop=2 shiftwidth=2 expandtab
 :hi CursorLine gui=none
 au BufRead,BufNewFile *.sss set filetype=stylus
 au BufRead,BufNewFile *.sgr set filetype=pug
-set termguicolors
+set makeprg=[[\ -f\ Makefile\ ]]\ &&\ make\ \\\|\\\|\ make\ \RunRelease\ -C\ ..
