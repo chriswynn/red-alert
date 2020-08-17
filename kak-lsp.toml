@@ -1,0 +1,30 @@
+[language.tsx]
+filetypes = ["typescript"]
+roots = ["package.json", "tsconfig.json"]
+command = "npx"
+args = ["typescript-language-server", "--stdio"]
+
+[language.javascript]
+filetypes = ["javascript"]
+roots = ["package.json"]
+command = "npx"
+args = ["typescript-language-server", "--stdio"]
+
+[language.css]
+filetypes = ["css"]
+roots = ["package.json"]
+command = "css-languageserver"
+args = ["--stdio"]
+
+[language.html]
+filetypes = ["html"]
+roots = ["package.json"]
+command = "html-languageserver"
+args = ["--stdio"]
+
+[language.elixir]
+filetypes = ["elixir"]
+roots = ["mix.exs"]
+command = "~/elixir-ls/rel/language_server.sh"
+args= ["sh"]
+

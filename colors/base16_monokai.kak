@@ -1,0 +1,42 @@
+## code
+    face global value rgb:fd971f+b
+    face global type rgb:f4bf75
+    face global identifier rgb:f92672
+    face global string rgb:a6e22e
+    face global error rgb:f8f8f2,rgb:a6e22e
+    face global keyword rgb:ae81ff+b
+    face global operator rgb:f8f8f2
+    face global attribute rgb:fd971f
+    face global comment rgb:75715e
+    face global meta rgb:f4bf75
+## markup
+    face global title rgb:66d9ef
+    face global header rgb:66d9ef
+    face global bold rgb:f4bf75
+    face global italic rgb:fd971f
+    face global mono rgb:a6e22e
+    face global block rgb:fd971f
+    face global link rgb:66d9ef
+    face global bullet rgb:a6e22e
+    face global list rgb:f92672
+## builtin
+    face global Default rgb:f8f8f2,rgb:272822
+    face global PrimarySelection rgb:f9f8f5,rgb:66d9ef
+    face global SecondarySelection rgb:f8f8f2,rgb:66d9ef
+    face global PrimaryCursor rgb:272822,rgb:f9f8f5
+    face global SecondaryCursor rgb:272822,rgb:f8f8f2
+    face global LineNumbers rgb:f8f8f2,rgb:383830
+    face global LineNumberCursor rgb:f8f8f2,rgb:282828+b
+    face global MenuForeground rgb:f9f8f5,rgb:66d9ef
+    face global MenuBackground rgb:66d9ef,rgb:383830
+    face global MenuInfo rgb:66d9ef
+    face global Information rgb:278222,rgb:66d9ef
+    face global Error rgb:383830,rgb:f9f8f5
+    face global StatusLine rgb:f5f4f1,rgb:383830
+    face global StatusLineMode rgb:f4bf75
+    face global StatusLineInfo rgb:66d9ef
+    face global StatusLineValue rgb:a6e22e
+    face global StatusCursor rgb:49483e,rgb:66d9ef
+    face global Prompt rgb:f4bf75,rgb:272822
+    face global MatchingChar rgb:66d9ef,rgb:272822+b
+    face global BufferPadding rgb:66d9ef,rgb:383830
